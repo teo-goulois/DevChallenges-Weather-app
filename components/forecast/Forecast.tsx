@@ -12,8 +12,8 @@ const Forecast = () => {
     <div className=" flex flex-col items-center justify-center md:h-[35%]">
       <CelciusButton />
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 p-5">
-        {weatherInfos?.forecast.forecastday.map((item) => {
-          return <Item weather={item} />;
+        {weatherInfos?.forecast.forecastday.map((item, index) => {
+          return <Item key={index} weather={item} />;
         })}
       </div>
     </div>

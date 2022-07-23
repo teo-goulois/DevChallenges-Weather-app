@@ -42,19 +42,32 @@ export const WeatherProvider = ({ children }: ProviderProps) => {
 
   useEffect(() => {
     if (navigator.geolocation) {
+      console.log("test");
+      if (navigator.permissions) {
+        navigator.permissions
+          .query({
+            name: "geolocation",
+          })
+          .then((permission) => {
+            permission.state !== "granted" && getDefaultWeatherInfo();
+          });
+      }
+
       getcurrentLoc(setWeatherInfos);
     } else {
-      getWeatherInfo();
+      console.log("errrrrr");
+
+      getDefaultWeatherInfo();
       alert("Geolocation is not supported by this browser.");
     }
   }, []);
 
-  const getWeatherInfo = async () => {
+  const getDefaultWeatherInfo = async () => {
     const response = await axios({
       method: "post",
       url: "/api/posts",
       data: {
-        location: "Paris, france",
+        location: "Paris france",
       },
     });
     setWeatherInfos(response.data.weatherDatas);
