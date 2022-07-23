@@ -1,4 +1,3 @@
-
 <!-- Please update value in the {}  -->
 
 <h1 align="center">Weather App</h1>
@@ -9,11 +8,11 @@
 
 <div align="center">
   <h3>
-    <a href="https://{your-demo-link.your-domain}">
+    <a href="https://dev-challenges-weather-app.vercel.app/">
       Demo
     </a>
     <span> | </span>
-    <a href="https://{your-url-to-the-solution}">
+    <a href="https://devchallenges.io/solutions/qt21GOhT5EA81oe5IUJW">
       Solution
     </a>
     <span> | </span>
@@ -39,7 +38,6 @@
 ## Overview
 
 ![screenshot](./Capture.PNG)
-
 
 ### Built With
 
@@ -81,7 +79,6 @@ $ npm start
 - [Marked - a markdown parser](https://github.com/chjj/marked)
 
 ## Contact
-
 
 - Website [teo-goulois.com](https://teogoulois-website.vercel.app/)
 - GitHub [@teo-goulois](https://github.com/teo-goulois)
