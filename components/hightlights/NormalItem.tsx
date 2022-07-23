@@ -31,7 +31,7 @@ const NormalItem = ({ title, number, label, windDirection }: Props) => {
       {/* additional info */}
       {/* wind direction */}
       {title === "Wind status" && (
-        <div className="flex items-center">
+        <div className="flex items-center h-full">
           <div
             style={{ transform: `rotate(${windDirection?.wind_degree})` }}
             className="text-primary bg-dark-gray p-1 rounded-full flex items-center justify-center"

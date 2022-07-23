@@ -7,7 +7,6 @@ import CelciusButton from "../buttons/CelciusButton";
 
 const Forecast = () => {
   const { weatherInfos } = useContext(WeatherContext);
-  console.log(weatherInfos);
 
   return (
     <div className=" flex flex-col items-center justify-center md:h-[35%]">

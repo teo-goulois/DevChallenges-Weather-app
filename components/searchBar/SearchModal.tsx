@@ -13,7 +13,6 @@ import SearchResultButton from "./SearchResultButton";
 import { WeatherSearchType } from "../../constants/types/Types";
 
 type Props = {};
-const test = [1, 2, 3];
 const variants = {
   open: { opacity: 1, transform: "translateX(0%)" },
   closed: { opacity: 0, transform: "translateX(-100%)" },
@@ -65,12 +64,5 @@ const SearchModal = ({}: Props) => {
   );
 };
 
-/* 
-searchResults.map((result) => {
-          console.log(result.region);
-
-          return <SearchResultButton key={result.id} item={result} />;
-        })
-*/
 
 export default SearchModal;

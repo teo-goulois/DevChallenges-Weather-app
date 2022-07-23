@@ -1,3 +1,4 @@
+import axios from "axios";
 import {
   createContext,
   Dispatch,
@@ -43,9 +44,21 @@ export const WeatherProvider = ({ children }: ProviderProps) => {
     if (navigator.geolocation) {
       getcurrentLoc(setWeatherInfos);
     } else {
+      getWeatherInfo();
       alert("Geolocation is not supported by this browser.");
     }
   }, []);
+
+  const getWeatherInfo = async () => {
+    const response = await axios({
+      method: "post",
+      url: "/api/posts",
+      data: {
+        location: "Paris, france",
+      },
+    });
+    setWeatherInfos(response.data.weatherDatas);
+  };
 
   const value = {
     searchBarIsOpen,

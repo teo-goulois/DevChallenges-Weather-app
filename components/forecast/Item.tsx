@@ -24,8 +24,6 @@ const Item = ({ weather }: Props) => {
         <Image
           className="object-contain"
           layout="fill"
-          /* width={"56.44px"}
-          height={"62px"} */
           src={`http:${weather.day.condition.icon}`}
           alt={weather.day.condition.text}
         />
